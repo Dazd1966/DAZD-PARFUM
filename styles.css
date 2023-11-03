@@ -1,0 +1,314 @@
+body {
+    background-color: black;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    font-family: 'Playfair Display', serif;
+    color: aliceblue;
+}
+
+a {
+    text-decoration: none;
+    color: burlywood;
+    font-style: italic;
+}
+
+.st.container {
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 2em;
+    background-color: black;
+}
+
+.logo-brand {
+    height: 3.5em;
+    width: 3.5em;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.3em;
+}
+
+.seccion1 {
+    justify-content: space-around;
+    display: flex;
+    color: aliceblue;
+    margin: 3em 0em 10em 0em;
+    flex-wrap: wrap;
+}
+
+
+.segmento-seccion1 {
+    text-align: center;
+}
+
+.segmento-seccion1 img {
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 2em 0em 0em 0em;
+}
+
+.seccion2 {
+    justify-content: space-around;
+    display: flex;
+    color: aliceblue;
+    margin: 10em 0em 5em 0em;
+    flex-wrap: wrap;
+}
+
+.segmento-seccion2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.segmento-seccion2 img {
+    height: 400px;
+    width: 450px;
+    margin: 2em 0em 0em 0em;
+    border-color: burlywood;
+}
+
+.segmento-redes {
+    margin-left: 2em;
+}
+
+.boton-contacto {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
+.boton-contacto a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.boton-contacto a img {
+    width: 40px;
+    height: 40px;
+}
+
+video {
+    top: 0px;
+    left: 0px;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.video-promocional {
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.video-promocional video {
+    width: 100%;
+}
+
+.video-promocional::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to bottom, black, transparent);
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.seccion3 {
+    height: 40em;
+    border: solid #000000;
+    background-image: url(Imagenes/fondo_contacto.jpg);
+
+}
+
+.form-content {
+    display: flex;
+    display: block;
+    text-align: center;
+    height: 20em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8em;
+    font-size: 18px;
+}
+ .form-content p {
+    margin: 1em;
+ }
+ .form-content h4 {
+    font-size: 22px;
+    margin-bottom: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ .form-row {
+    height: 2em;
+ }
+
+ .form-row button {
+    height: 40px;
+    width: 10%;
+    border: transparent;
+    border-radius: 1em;
+    margin-top: 2em;
+ }
+
+ .form-row input {
+    margin: 1em;
+    width: 20%;
+    height: 20px;
+    border: transparent;
+    color: transparent 80%;
+ }
+
+
+/* MEDIA QUERIES */
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
+@media (max-width: 768px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+    body {
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    /* CODIGO PARA BARRA DE NAVEGACIÓN CON SOLO CSS */
+    /* #main-navigation ul {
+        position: fixed;
+        width: 100%;
+        height: 1000vh;
+        background-color: black;
+        text-align: center;
+
+        top: 80px;
+        left: 100%;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    #check:checked ~ ul {
+        left: 0%;
+        display: block;
+    }
+
+    #main-navigation nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #main-navigation nav ul li a {
+        font-size: 24px;
+    } */
+
+    .video-promocional {
+        z-index: -1;
+    }
+
+    .navbar {
+        height: 0vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #000000;
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+    
+        transition: all 0.5s;
+        overflow: hidden;
+        display: block;
+    }
+    
+    .navbar ul {
+        float: none;
+        display: block;
+        opacity: 0;
+        height: 100vh;
+        justify-items: center;
+        padding: 0%;
+    }
+    
+    .navbar ul li a:hover {
+        color: #b59a61;
+    }
+    
+      /* ACTIVE */
+    .navbar.active {
+        height: 100vh;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    
+    .navbar.active ul {
+        opacity: 1;
+    }
+    .navbar.active ul li {
+        margin-top: 2em;
+    }
+
+    .form-row {
+        height: 2em;
+     }
+    
+     .form-row button {
+        height: 40px;
+        width: 20%;
+        border: transparent;
+        border-radius: 1em;
+        margin-top: 2em;
+     }
+    
+     .form-row input {
+        margin: 1em;
+        width: 35%;
+        height: 20px;
+        border: transparent;
+        color: transparent 80%;
+     }
+}
