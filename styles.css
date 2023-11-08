@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: black;
     color: aliceblue;
@@ -50,21 +54,37 @@ header nav ul {
 .seccion1 {
     justify-content: space-around;
     display: flex;
-    color: aliceblue;
-    margin: 3em 0em 10em 0em;
+    margin: 10em 0em 10em 0em;
     flex-wrap: wrap;
 }
 
 
 .segmento-seccion1 {
     text-align: center;
+    width: 405px;
+    height: 100%;
+    justify-content: center;
+
 }
 
-.segmento-seccion1 img {
+.img-container {
     height: 400px;
     width: 400px;
+    background-color: #000;
+    line-height: 0;
     border-radius: 10px;
-    margin: 2em 0em 0em 0em;
+    overflow: hidden;
+}
+
+.img-container:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .seccion2 {
@@ -78,6 +98,13 @@ header nav ul {
 .segmento-seccion2 {
     text-align: center;
     font-size: 18px;
+    background-color: #000;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.segmento-seccion2:hover {
+    opacity: 0.8;
 }
 
 .segmento-seccion2 img {
@@ -157,7 +184,6 @@ video {
     height: 40em;
     border: solid #000000;
     background-image: url(Imagenes/fondo_contacto.jpg);
-
 }
 
 .form-content {
@@ -170,34 +196,36 @@ video {
     margin-top: 8em;
     font-size: 18px;
 }
- .form-content p {
+
+.form-content p {
     margin: 1em;
- }
- .form-content h4 {
+}
+
+.form-content h4 {
     font-size: 22px;
     margin-bottom: 2em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
- }
+}
 
- .form-row {
+.form-row {
     height: 2em;
- }
+}
 
- .form-row button {
+.form-row button {
     height: 40px;
     width: 10%;
     border: transparent;
     border-radius: 1em;
     margin-top: 2em;
- }
+}
 
- .form-row input {
+.form-row input {
     margin: 1em;
     width: 20%;
     height: 20px;
     border: transparent;
     color: transparent 80%;
- }
+}
 
 
 /* MEDIA QUERIES */
@@ -205,6 +233,7 @@ video {
 /* Estilos para pantallas más pequeñas (hasta 768px) */
 
 @media (max-width: 768px) {
+
     /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
     body {
         align-items: center;
@@ -259,12 +288,12 @@ video {
         text-align: center;
         font-size: 30px;
         margin: 0;
-    
+
         transition: all 0.5s;
         overflow: hidden;
         display: block;
     }
-    
+
     .navbar ul {
         float: none;
         display: block;
@@ -273,42 +302,63 @@ video {
         justify-items: center;
         padding: 0%;
     }
-    
+
     .navbar ul li a:hover {
         color: #b59a61;
     }
-    
-      /* ACTIVE */
+
+    /* ACTIVE */
     .navbar.active {
         height: 100vh;
         width: 100%;
         overflow-y: hidden;
+        /* display: none; */
     }
-    
+
     .navbar.active ul {
         opacity: 1;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 10px 20px;
+        z-index:1; */
     }
+
     .navbar.active ul li {
         margin-top: 2em;
     }
 
     .form-row {
         height: 2em;
-     }
-    
-     .form-row button {
+    }
+
+    .form-row button {
         height: 40px;
         width: 20%;
         border: transparent;
         border-radius: 1em;
         margin-top: 2em;
-     }
-    
-     .form-row input {
+    }
+
+    .form-row input {
         margin: 1em;
         width: 35%;
         height: 20px;
         border: transparent;
         color: transparent 80%;
-     }
+    }
+
+    /* #popup-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .full-layer {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    } */
 }
